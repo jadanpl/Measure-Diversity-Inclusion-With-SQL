@@ -41,7 +41,7 @@ SELECT emp_name, Salary, Termd, Position,
 FROM hr_dataset;
 
 SELECT * FROM eng_hr_dataset;
-DESCRIBE eng_hr_dataset;
+DESCRIBE eng_hr_dataset; # to examine the columns of the view eng_hr_dataset
 
 SELECT 
     generation,
