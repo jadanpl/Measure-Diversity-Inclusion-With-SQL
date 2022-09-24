@@ -93,7 +93,7 @@ WHERE Termd =0
 GROUP BY Department, Sex;
 
 -- Q U E R Y 2
--- number of current (not resigned or teminated) employees by gender and department
+-- number of current (not resigned or teminated) employees by gender and department; use pivoting 
 SELECT 
 	Sex, SUM(Production) AS `Production`, SUM(`IT/IS`) AS `IT/IS`, 
     SUM(`Software Engineering`) AS `Software Engineering`, 
@@ -139,7 +139,7 @@ FROM(
 INNER JOIN(
 	SELECT Department, `Level`,Sex, COUNT(*) AS current_emp
 	FROM eng_hr_dataset
-    WHERE termd=0
+    	WHERE termd=0
 	GROUP BY `Level`,Sex)a
 ON (a.`Level`=c.`Level`) AND (a.Sex=c.Sex)
 ORDER BY `Level`, pct_of_chg DESC;
@@ -262,7 +262,7 @@ WHERE count_of_group BETWEEN total_in_group / 2.0 AND total_in_group / 2.0 + 1
 GROUP BY median_group;
 
 -- Q U E R Y 9
--- the best recruiting sources to ensure a diverse organization?
+-- the best recruiting platform to use if the company want to ensure diversity
 SELECT RecruitmentSource, RaceDesc, COUNT(*) AS num_of_employees
 FROM hr_dataset
 WHERE (RaceDesc NOT LIKE 'White') AND (Termd=0) AND ((PerformanceScore LIKE "%Exceeds%") OR (PerformanceScore LIKE "%Fully Meets%"))
