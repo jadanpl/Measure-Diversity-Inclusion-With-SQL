@@ -43,6 +43,7 @@ FROM hr_dataset;
 SELECT * FROM eng_hr_dataset;
 DESCRIBE eng_hr_dataset; # to examine the columns of the view eng_hr_dataset
 
+-- trimmed average service period of the employees by gender and generations
 SELECT 
     generation,
     Sex,
