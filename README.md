@@ -3,16 +3,23 @@ For this project, I obtained the <a href="https://www.kaggle.com/datasets/rhuebn
 
 # Hypothetical Questions & Results
 1. Create a view called “eng_hr_dataset” that includes all the columns of the dataset, except the “HispanicLatino” column and columns with “ID” in their names. Then, calculate the age, job level, and service period of all employees. Finally, determine generational diversity in the workplace, as well as the average (trimmed) service period of each generation. <br><br><img src="https://miro.medium.com/max/1100/1*YlXAft5Ojr0VN0Nrpz-5PQ.png" alt="Result for query 1">
-2. <br><br><img src="" alt="Result for query ">
-3. <br><br><img src="" alt="Result for query ">
-4. <br><br><img src="" alt="Result for query ">
-5. <br><br><img src="" alt="Result for query ">
-6. <br><br><img src="" alt="Result for query ">
-7. <br><br><img src="" alt="Result for query ">
-8. <br><br><img src="" alt="Result for query ">
-9. <br><br><img src="" alt="Result for query ">
+2. Find out the number of existing employees by department and gender. <br><br><img src="https://miro.medium.com/max/1100/1*aerwUI5f5Lny1uNUO6MgiA.png" alt="Result for query 2">
+3. Calculate the original number of employees, the number of current employees, and the percentage of change in the number of employees by job level and gender.<br><br><img src="https://miro.medium.com/max/1100/1*TE1BnJ4oNDeZWX6J9PM-Qw.png" alt="Result for query 3">
+4. Calculate the original total number of employees, the number of current employees, and the number of employees who left the company by department, job level, gender, and race. Then, determine the respective turnover rate of the employees. Only show the rows that involve resigned employees.<br><br><img src="https://miro.medium.com/max/1100/1*p6e2SK3Qk83cqUIF58p5rg.png" alt="Result for query 4">
+5. Calculate the number and the running total of terminated employees as well as their respective termination reasons.<br><br><img src="https://miro.medium.com/max/1100/1*yyqaviMZRC5WyuqEYJ59aQ.png" alt="Result for query 5">
+6. Find out the managers’ names and the number of employees within his/ her team who resigned due to unhappiness, but fully met or exceeds their performance assessment criteria.<br><br><img src="https://miro.medium.com/max/1100/1*sqRcEjuofbyNwmEDy11kwg.png" alt="Result for query 6">
+7. Calculate the overall turnover rate (in the context of the whole organization) as well as the turnover rate of the employees by gender. Only considers those employees who voluntarily resigned and not due to their attendance or performance (fully met or exceeds their performance assessment criteria) issues.**<br><br><img src="https://miro.medium.com/max/1100/1*gIAHKwHWzJVRTcDNTcR4CA.png" alt="Result for query 7">
+8. Find the median pay of each gender. <br><br><img src="https://miro.medium.com/max/1400/1*MTe0gKQo3z5PD4SLMMEeCA.png" alt="Result for query 8">
+9. Determine the best recruitment platform to use if the company would like to ensure diversity. Only consider those employees who are not Caucasian, but who fully meet or exceed the performance assessment criteria.<br><br><img src="https://miro.medium.com/max/1100/1*bkX5yuPvLUpCCGvHuvbH5w.png" alt="Result for query 9">
 
 # Summary
 For the complete code explanation & analysis, please check out <a href="https://jadangpooiling.medium.com/analyzing-hr-metrics-with-sql-to-measure-diversity-inclusion-1c00bf4b6bae">my article on Medium</a>. Below are summary of the analysis.
 1. Most of the current employees are Generation Y (102), followed by Generation X (87), and finally Baby Boomers (10). Generally, the average service period of Generation X is longer than that of Generation Y (also known as millennials).
-2. 
+2. 111 females and 88 males are currently working in the company. Females mostly work in production, software engineering, admin, and executive office. On the other hand, a higher number of male employees work in IT/ IS and sales departments.
+3. Originally, the gender distribution in the top management and the senior executive levels are quite balanced, until one of the male senior executives left the company. There are fewer female managers as compared to male managers. Resigned employees are mostly female executives.
+4. All male Asian managers in production and all male Black or African American executives in the software engineering department (refer to the last 2 rows of the result) had left the company. This might be due to the lack of promotion opportunities or their jobs do not allow them to grow professionally.
+5. There were 104 resigned or terminated employees. 4 employees left the company due to performance issues, and 3 out of these 4 low performers are terminated involuntarily. Besides, 7 employees left the company due to attendance issues, whereby one of them resigned voluntarily. Moreover, the result showed that most of the voluntarily resigned employees left the company to look for another position, more money, or they are unhappy working in their team. 
+6. There are 3 employees under Amy Dunn’s team who resigned due to unhappiness. A deep investigation would be needed to discover if there is any workplace bullying within Amy’s team, or if her team members are overworking due to an insufficient workforce.
+7. 78 employees who have no performance or attendance issues left the company and this made up the overall turnover rate of 31.08%. The individual turnover rate contributed by the female employees is higher than the individual turnover rate contributed by the male employees.
+8. It is shown that the salary for female employees is lower than for male employees. 
+9. It appears that Indeed brought the most diverse and performing people to this company. It is suggested that the company should continue using this platform if it wants to ensure workplace diversity.
